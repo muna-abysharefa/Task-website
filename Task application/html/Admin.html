@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta charset="utf-8"/> 
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="../admin.css">
+  <title> Admin Page </title>
+    </head>
+
+    <body>
+      <div class="container-fluid py-2">
+          <div class="row">
+              <div class="col-xl-2 openside" id="sidemenue">
+              <h3 class="text-center setting-wrd fw-bolder"> Setting </h3>
+              <hr>
+              <div class="container-fluid p-0">
+                
+                <ul class="task_list p-0">
+                  <li>
+                      <a href="#">General</a>
+                  </li>
+                    <li>
+                        <a href="../html/Register.html" target="_parent">Create Account</a>
+                    </li>
+                    <li>
+                      <a href="../html/user_list.html" target="_parent">Users List</a>
+                  </li>
+                    
+                </ul>
+            </div>
+             
+              
+
+              </div>
+
+              <div class="col-xl-10" id="main">
+                <div class="row py-3 mb-2 m-0 rounded-3" style="background-color: white;">
+                   <div class="col-sm-1 d-flex justify-content-center my-2">
+                       <button id="toggle">
+                           <i class="fas fa-bars"></i>
+                       </button>
+                   </div>
+                   <div class="col-sm-9 d-flex justify-content-center my-2">
+                   <h2 class="m-0"> Task List </h2>
+                </div>
+
+                <div class="col-sm-2 d-flex justify-content-center my-2">
+                    
+                 </div>
+                </div>
+
+                <div class="dashboard p-3" style="background-color: white">
+                    <form action="#" class="row add_task w-85 align-items-center">
+                     
+                        <div class="col-md-2">
+                           <input type="text" class="task_input" placeholder="Enter Task" id="addtask">
+                        </div>
+                        
+                        <div class="col-md-2">
+                            <input type="text" class="task_input" placeholder="Asignee" id="asignee">
+
+                        </div>
+                        <div class="col-md-2">
+                          <input type="text" class="task_input" placeholder="Description" id="descr">
+
+                      </div>
+                      <div class="col-md-2">
+                        <input type="date" class="task_input" placeholder="1-1-2022" id="date">
+                    </div>
+                        <div class="col-md-2">
+                           <button type="submit" class="btn btn-dark" onclick="Addrow()">
+                               <i class="fas fa-plus-square me-2"></i>
+                               Task
+                           </button>
+                        </div>
+                    </form>
+<br>
+                    <table class="table my-5" id="myTable">
+                        <thead>
+                          <tr class="table-info">
+                            <th scope="col" id="idnum">ID</th>
+                            <th scope="col" id="titletask">Name</th>
+                            <th scope="col" id="name">Assignee</th>
+                            <th scope="col" id="desc">Description</th>
+                            <th scope="col" id="time">Create Time</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td id="titletask1">HTML & CSS</td>
+                            <td id="nametask1">Muna</td>
+                            <td id="desctask1">DeadLine in 2022-02-15</td>
+                            <td id="timecreate1">2022-02-11</td>                       
+                            <td>
+                                <button class="btn btn-info text-light" data-toggle="modal" data-target="#editModal" id="editbutton">
+                                    <i class="fas fa-pen-alt"></i>
+                                </button>
+
+                                <button class="btn btn-danger text-light" data-toggle="modal" data-target="#deleteModal" onclick="deleteRow(this)">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>JavaScript</td>
+                            <td>Muna</td>
+                            <td>DeadLine in 2022-02-17</td>
+                            <td>2022-02-15</td>
+                            <td>
+                                <button class="btn btn-info text-light" data-toggle="modal" data-target="#editModal" id="editbutton">
+                                    <i class="fas fa-pen-alt"></i>
+                                </button>
+
+                                <button class="btn btn-danger text-light" data-toggle="modal" data-target="#deleteModal" onclick="deleteRow(this)">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Angular</td>
+                            <td>Muna</td>
+                            <td>DeadLine in 2022-02-21</td>
+                            <td>2022-02-17</td>
+                            <td>
+                                <button class="btn btn-info text-light" data-toggle="modal" data-target="#editModal" id="editbutton">
+                                    <i class="fas fa-pen-alt"></i>
+                                </button>
+
+                                <button class="btn btn-danger text-light" data-toggle="modal" data-target="#deleteModal" onclick="deleteRow(this)">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Database</td>
+                            <td>Muna</td>
+                            <td>DeadLine in 2022-02-22</td>
+                            <td>2022-02-21</td>
+                            <td>
+                                <button class="btn btn-info text-light" data-toggle="modal" data-target="#editModal" id="editbutton">
+                                    <i class="fas fa-pen-alt"></i>
+                                </button>
+
+                                <button class="btn btn-danger text-light" data-toggle="modal" data-target="#deleteModal" onclick="deleteRow(this)">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>API</td>
+                            <td>Muna</td>
+                            <td>DeadLine in 2022-02-24</td>
+                            <td>2022-02-22</td>
+                            <td>
+                                <button class="btn btn-info text-light" data-toggle="modal" data-target="#editModal" id="editbutton">
+                                    <i class="fas fa-pen-alt"></i>
+                                </button>
+
+                                <button class="btn btn-danger text-light" data-toggle="modal" data-target="#deleteModal" onclick="deleteRow(this)">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td>Asp.net</td>
+                           <td>Laila</td>
+                            <td>DeadLine in 2022-03-21</td>
+                            <td>2022-03-6</td>
+                            <td>
+                              <button class="btn btn-info text-light" data-toggle="modal" data-target="#editModal" id="editbutton">
+                                  <i class="fas fa-pen-alt"></i>
+                              </button>
+
+                              <button class="btn btn-danger text-light" data-toggle="modal" data-target="#deleteModal" onclick="deleteRow(this)">
+                                  <i class="fas fa-trash-alt"></i>
+                              </button>
+
+                          </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">7</th>
+                            <td>vb.net</td>
+                           <td>Laila</td>
+                            <td>DeadLine in 2022-03-30</td>
+                            <td>2022-03-22</td>
+                            <td>
+                              <button class="btn btn-info text-light" data-toggle="modal" data-target="#editModal" id="editbutton">
+                                  <i class="fas fa-pen-alt"></i>
+                              </button>
+
+                              <button class="btn btn-danger text-light" data-toggle="modal" data-target="#deleteModal" onclick="deleteRow(this)">
+                                  <i class="fas fa-trash-alt"></i>
+                              </button>
+
+                          </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">8</th>
+                            <td>React</td>
+                           <td>Laila</td>
+                            <td>DeadLine in 2022-04-04</td>
+                            <td>2022-04-31</td>
+                            <td>
+                              <button class="btn btn-info text-light" data-toggle="modal" data-target="#editModal" id="editbutton">
+                                  <i class="fas fa-pen-alt"></i>
+                              </button>
+
+                              <button class="btn btn-danger text-light" data-toggle="modal" data-target="#deleteModal" onclick="deleteRow(this)">
+                                  <i class="fas fa-trash-alt"></i>
+                              </button>
+
+                          </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">9</th>
+                            <td>Agile</td>
+                           <td>Laila</td>
+                            <td>DeadLine in 2022-04-06</td>
+                            <td>2022-04-05</td>
+                            <td>
+                              <button class="btn btn-info text-light" data-toggle="modal" data-target="#editModal" id="editbutton">
+                                  <i class="fas fa-pen-alt"></i>
+                              </button>
+
+                              <button class="btn btn-danger text-light" data-toggle="modal" data-target="#deleteModal" onclick="deleteRow(this)">
+                                  <i class="fas fa-trash-alt"></i>
+                              </button>
+
+                          </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">10</th>
+                            <td>C#</td>
+                           <td>Laila</td>
+                            <td>DeadLine in 2022-04-10</td>
+                            <td>2022-04-07</td>
+                            <td>
+                              <button class="btn btn-info text-light" data-toggle="modal" data-target="#editModal" id="editbutton">
+                                  <i class="fas fa-pen-alt"></i>
+                              </button>
+
+                              <button class="btn btn-danger text-light" data-toggle="modal" data-target="#deleteModal" onclick="deleteRow(this)">
+                                  <i class="fas fa-trash-alt"></i>
+                              </button>
+
+                          </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- edit task  -->
+
+      <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editModalLabel">Edit Task</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                      <div class="form-group col-md-2">
+                        <label for="inputid">ID</label>
+                        <input type="number" class="form-control" id="inputid" placeholder="1">
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label for="inputname">Name</label>
+                        <input type="text" class="form-control" id="inputname" placeholder="Name Task">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputname">Asignee</label>
+                        <input type="text" class="form-control" id="inputname" placeholder="Name">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputAddress">Description</label>
+                      <input type="text" class="form-control" id="inputdescription">
+                    </div>
+                    <div class="form-group">
+                      <label for="inputcreattime">Create Time</label>
+                      <input type="date" class="form-control" id="inputtime" placeholder="YYYY-MM-D">
+                    </div>
+                   
+                </form>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<!-- delete task -->
+ <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Delete Task</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      Are you sure to delete this task ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="deleteRow(this)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div> 
+
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" ></script>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    //    function mobile_responsive(x){
+    //        if(x.matches){
+    //            side.className ="closeside";
+    //            document.getElementById("main").className= "col-xl-12";
+    //        }
+    //        else{
+    //            side.className ="col-xl-2 openside";
+    //            document.getElementById("main").className= "col-xl-10";
+
+    //        }
+    //    }
+    //    var x = window.matchMedia("(max-width=700px)");
+    //    document.getElementById("main").className= "col-xl-12";
+    //    mobile_responsive(x);
+    //    x.addListener(mobile_responsive);
+
+</script>
+    
+      <script src="../admin.js"></script> 
+      
+      <script src="../bootstrap/js/bootstrap.min.js"></script>
+      <script src="../bootstrap/js/popper.min.js"></script>
+ 
+    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script> 
+      
+       </body>
+      
+      </html>

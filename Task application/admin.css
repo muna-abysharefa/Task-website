@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: aliceblue;
+}
+.setting-wrd{
+    font-family: 'Pacifico', cursive;
+}
+.openside{
+    background-color: white;
+    padding: 12px;
+}
+.openside{
+display: block;
+transition: 0.3s ease;
+}
+.closeside{
+display:none;
+transition: 0.3s ease;
+}
+
+/* .search{
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: aliceblue;
+    padding: 8px 0;
+}
+.search input{
+    background:transparent ;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 0 2px;
+}
+
+.search button{
+    padding:0 9px;
+    background: transparent;
+    border: none;
+} */
+
+/* .task_list{
+    height: 12rem;
+    overflow-y: scroll;
+}
+.task_list::-webkit-scrollbar{
+width: 10px;
+}
+.task_list::-webkit-scrollbar-track{
+    background-color: rgb(193, 222, 247);
+}
+.task_list::-webkit-scrollbar-thumb{
+    background-color: deepskyblue;
+}
+.task_list li{
+    margin: 8px 0;
+}
+.task_list li a{
+    color: rgb(6, 6, 105);
+    text-decoration: none;
+} */
+#toggle{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gainsboro;
+    background-color: transparent;
+}
+.task_input{
+    background-color: aliceblue;
+    border-radius: 8px;
+    height: 44px;
+    border: 1px solid gainsboro;
+    padding: 0 5px;
+    outline: none;
+}
+
+.table tbody tr:hover{
+    background-color: rgb(228, 242, 254);
+}

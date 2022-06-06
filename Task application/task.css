@@ -1,0 +1,140 @@
+body{
+     background-color: rgb(4, 4, 183);
+ }
+
+ .text{
+   margin-top: 5cm;
+   padding: 12px;
+   margin-left: 20px;
+   color: #20c5fb;
+   font-family: fantasy;
+ }
+ .txt-logo{
+   font-family: fantasy;
+    color: white;
+ }
+ .card {
+    width: 52%;
+    float: right;
+    border: 1px solid darkgray;
+    border-radius: 4%;
+   background-color: white;
+   position: relative;
+   right: 4cm;
+   top: 4cm;
+}
+
+.form-control{
+    border: 2px solid #ffffff21;
+    border-radius: 5% 5% 5% 5%;
+    width: 240px;
+    background-color: #ece7e766;
+    padding: 7px;
+    margin: 12px;
+}
+
+ input::placeholder{
+     color: rgb(180, 178, 178);
+     font-size: 12px;
+    padding: 22px;
+ }
+
+ .title{
+    text-align: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-stretch: expanded;
+ }
+
+ .subtitle{
+    text-align: center;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+ }
+
+ /* #login-error-msg-holder {
+   width: 100%;
+   height: 100%;
+   display: grid;
+   justify-items: center;
+   align-items: center;
+ }
+ 
+ #login-error-msg {
+   width: 23%;
+   text-align: center;
+   margin: 0;
+   padding: 5px;
+   font-size: 12px;
+   font-weight: bold;
+   color: #8a0000;
+   border: 1px solid #8a0000;
+   background-color: #e58f8f;
+   opacity: 0;
+ }
+ 
+ #error-msg-second-line {
+   display: block;
+ } */
+ .person{
+    position: absolute;
+    left: 18px;
+    top: 3cm;
+ }
+ .password{
+    position: absolute;
+    left: 15px;
+    top: 4.4cm;
+ }
+ .form-check{
+    margin: 12px;
+ }
+ .form-check-label{
+   color: #3978f1;
+   font-size: 13px;
+   font-family: system-ui;
+   
+ }
+ .forgot_pass{
+   color: #3978f1;
+   font-size: 13px;
+   font-family: system-ui;
+   margin-left: 39px;
+   text-decoration: none;
+ }
+ .btn{
+   border-radius: 36px;
+   width: 88%;
+   padding: 10px;
+   border: none;
+   color: white;
+   font-size: 15px;
+   background-color: #20c5fb;
+   margin: 15px;
+  
+ }
+ .pargraph{
+    color: white;
+ }
+
+ .account{
+   font-size: 15px;
+   margin-left: 1.5cm;
+   color: darkgray;
+ }
+ .arrow{
+   opacity: 0.4;
+   margin-left: 5px;
+ }
+ footer{
+   margin-top: 9cm;
+   background-color: #0f39ba;
+   padding: 8px;
+ }
+
+ .txt-footer{
+    color: #20c5fb;
+ }
+
+ 

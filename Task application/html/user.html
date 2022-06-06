@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta charset="utf-8"/> 
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="../admin.css">
+  <title> User Page </title>
+    </head>
+
+    <body>
+      <div class="container-fluid py-2">
+          <div class="row">
+              <div class="col-xl-2 openside" id="sidemenue">
+              <h3 class="text-center setting-wrd fw-bolder">Profile </h3>
+              <hr>
+              <div class="container-fluid p-0">
+                
+                <ul class="task_list p-0">
+                    <li>
+                        <a href="../html/profile_user.html" target="_parent">Personal Information</a>
+                    </li>
+                    <li>
+                      <a href="#">My Tasks</a>
+                  </li>
+                </ul>
+            </div>
+               </div>
+
+              <div class="col-xl-10" id="main">
+                <div class="row py-3 mb-2 m-0 rounded-3" style="background-color: white;">
+                   <div class="col-sm-1 d-flex justify-content-center my-2">
+                       <button id="toggle">
+                           <i class="fas fa-bars"></i>
+                       </button>
+                   </div>
+                   <div class="col-sm-9 d-flex justify-content-center my-2">
+                   <h2 class="m-0"> My Account </h2>
+                </div>
+
+                <div class="col-sm-2 d-flex justify-content-center my-2">
+                    
+                 </div>
+                </div>
+                <div class="dashboard p-3" style="background-color: white">
+                    <table class="table my-5" id="myTable">
+                        <thead>
+                          <tr class="table-info">
+                            <th scope="col">#</th>
+                            <th scope="col" id="titletask">Name</th>
+                         
+                            <th scope="col" id="desc">Description</th>
+                            <th scope="col" id="time">Create Time</th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td id="titletask1">HTML & CSS</td>
+                         
+                            <td id="desctask1">DeadLine in 2022-02-15</td>
+                            <td id="timecreate1">2022-02-11</td>                      
+
+                        </tr>
+
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>JavaScript</td>
+                          
+                          <td>DeadLine in 2022-02-17</td>
+                          <td>2022-02-15</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Angular</td>
+                         
+                          <td>DeadLine in 2022-02-21</td>
+                          <td>2022-02-17</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Java</td>
+                           
+                            <td>DeadLine in 2022-02-28</td>
+                            <td>2022-02-17</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>Database</td>
+                           
+                            <td>DeadLine in 2022-03-04</td>
+                            <td>2022-03-01</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td>Asp.net</td>
+                           
+                            <td>DeadLine in 2022-03-21</td>
+                            <td>2022-03-6</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">7</th>
+                            <td>vb.net</td>
+                           
+                            <td>DeadLine in 2022-03-30</td>
+                            <td>2022-03-22</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">8</th>
+                            <td>React</td>
+                           
+                            <td>DeadLine in 2022-04-04</td>
+                            <td>2022-04-31</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">9</th>
+                            <td>Agile</td>
+                           
+                            <td>DeadLine in 2022-04-06</td>
+                            <td>2022-04-05</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">10</th>
+                            <td>C#</td>
+                           
+                            <td>DeadLine in 2022-04-10</td>
+                            <td>2022-04-07</td>
+                          </tr>
+                          
+                    </tbody>
+                  </table>
+
+            </div>
+          </div>
+      </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" ></script>
+      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+     <script src="../admin.js"></script> 
+      
+      <script src="../bootstrap/js/bootstrap.min.js"></script>
+      <script src="../bootstrap/js/popper.min.js"></script>
+ 
+       <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script> 
+      
+       </body>
+      
+      </html>

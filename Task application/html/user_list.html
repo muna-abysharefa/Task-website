@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta charset="utf-8"/> 
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="../admin.css">
+  <title> Admin Page </title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 w-100" id="main">
+                    <div class="row py-3 mb-2 m-0">
+                      
+                       <div class="col-sm-9 d-flex justify-content-center my-2">
+                       <h2 class="m-2" style="padding-left: 2cm;"> User List </h2>
+                    </div>
+                    </div>
+    
+                    <div class="p-3" style="background-color: white">
+    
+                        <table class="table my-5 w-100" id="myTable">
+                            <thead>
+                              <tr class="table-info">
+                                <th scope="col" id="iduser">User ID</th>
+                                <th scope="col" id="fname">First Name</th>
+                                <th scope="col" id="lname">Last Name</th>
+                                <th scope="col" id="uname">UserName</th>
+                                <th scope="col" id="pass">Password</th>
+                                <th scope="col" id="ctime">Create Time</th>
+                                <th scope="col">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Muna</td>
+                                <td>Abushareefa</td>
+                                <td>mun123</td>
+                                <td>123</td>        
+                                <td>3:21 PM </td>               
+                                <td>
+                                 
+                                    <button class="btn btn-danger text-light" data-toggle="modal" data-target="#deleteModal" onclick="deleteRow(this)">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+    
+                                </td>
+                              </tr>
+    
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Rania</td>
+                                <td>Alshamek</td>
+                                <td>alshamkrania</td>
+                                <td>123456</td>
+                                <td>3:23 PM</td>
+                                <td>
+                                   
+                                    <button class="btn btn-danger text-light" data-toggle="modal" data-target="#deleteModal" onclick="deleteRow(this)">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+    
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>Rima</td>
+                                <td>Abu Alrub</td>
+                                <td>rima654</td>
+                                 <td>77785</td>
+                                <td>3:24 PM</td>
+                               
+                                <td>
+                                
+                                    <button class="btn btn-danger text-light" data-toggle="modal" data-target="#deleteModal" onclick="deleteRow(this)">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+    
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">4</th>
+                                <td>Anwer</td>
+                                <td>Alshareefa</td>
+                                <td>Alshareef</td>
+                                <td>1256</td>
+                                <td>3:25 PM</td>
+                                <td>
+                                 
+                                    <button class="btn btn-danger text-light" data-toggle="modal" data-target="#deleteModal" onclick="deleteRow(this)">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+    
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">5</th>
+                                <td>Ahmad</td>
+                                <td>Saleh</td>
+                                <td>ahmad85</td>
+                                <td>5842</td>
+                                <td>3:27 PM</td>
+                                <td>
+                                  
+                                    <button class="btn btn-danger text-light" data-toggle="modal" data-target="#deleteModal" onclick="deleteRow(this)">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+    
+                                </td>
+                              </tr>
+                              
+                            </tbody>
+                          </table>
+    
+                    </div>
+                  </div>
+                  <br>
+                  <div class="m-3">
+                      <button type="submit" class="back_admin btn btn-lg btn-info" onclick="back()">Back Home</button>
+                  </div>
+              </div>
+          </div>
+          <!-- delete user -->
+ <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteModalLabel">Delete User</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        Are you sure to delete this task ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="deleteRow(this)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+          <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" ></script>
+          <script src="../admin.js"></script> 
+      
+          <script src="../bootstrap/js/bootstrap.min.js"></script>
+          <script src="../bootstrap/js/popper.min.js"></script>
+     <script>
+       function back(){
+ window.location.href='Admin.html';
+       }
+   
+ 
+</script>
+           </body>
+          
+          </html>
